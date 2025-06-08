@@ -59,5 +59,5 @@
 
 
 <script setup lang="ts">
-import SkillBlock from '@/components/SkillBlock.vue'
+import SkillBlock from '../components/SkillBlock.vue'
 </script>
