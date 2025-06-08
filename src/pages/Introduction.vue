@@ -6,7 +6,7 @@
   >
     <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/20 to-black/40 z-0"></div>
 
-    <div class="relative z-10 flex flex-col justify-center items-center text-white text-center px-4 pt-[15%]">
+    <div class="relative z-10 flex flex-col justify-center items-center text-white text-center px-4 pt-32 md:pt-[15%]">
       <h1 class="text-4xl md:text-6xl font-light tracking-wide leading-tight max-w-4xl">
         Hola, soy <span class="font-semibold">Mario Cristian Dascalu Marisca</span>
       </h1>
