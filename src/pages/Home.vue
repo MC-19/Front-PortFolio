@@ -18,6 +18,6 @@
     import WhatIDo from '@/pages/WhatIDo.vue'
     import Skills from '@/pages/Skills.vue'
     import MiCV from '@/pages/MiCV.vue'
-    import Projectos from '@/pages/projects.vue'
+    import Projectos from '@/pages/Projects.vue'
     import Contacto from '@/pages/Contact.vue'
 </script>
