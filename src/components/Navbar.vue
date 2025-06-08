@@ -15,7 +15,7 @@
       <ul class="flex space-x-8">
         <li><a href="#inicio" :class="linkClass">Inicio</a></li>
         <li><a href="#sobre-mi" :class="linkClass">Sobre mí</a></li>
-        <li><a href="#que-hago" :class="linkClass">Qué hago</a></li>
+        <li><a href="#que-hago" :class="linkClass">Especialidad</a></li>
         <li><a href="#skills" :class="linkClass">Skills</a></li>
         <li><a href="#contacto" :class="linkClass">Contacto</a></li>
       </ul>
