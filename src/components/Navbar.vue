@@ -7,15 +7,13 @@
     ]"
   >
     <div class="w-full px-6 md:px-20 pt-6 pb-6 flex justify-between items-center">
-<a href="#inicio" class="pl-1 md:pl-2 flex items-center">
-  <img
-    src="/public/logo.png"
-    alt="Logo Mario Cristian"
-    class="h-10 md:h-14 w-auto transition-all duration-300"
-    :class="{ 'invert': !(opacity > 0.5 || isMobile.value) }"
-  />
-</a>
-
+      <a href="#inicio" class="pl-1 md:pl-2 flex items-center">
+        <img
+          :src="logoSrc"
+          alt="Logo Mario Cristian"
+          class="h-10 md:h-14 w-auto transition-all duration-300"
+        />
+      </a>
 
       <!-- Botón hamburguesa -->
       <button
@@ -54,8 +52,8 @@ const isMobile = ref(window.innerWidth < 768)
 
 const logoSrc = computed(() =>
   opacity.value > 0.5 || isMobile.value
-    ? '/public/logo.png'         // negro cuando fondo claro
-    : '/public/logo.png'   // blanco cuando fondo oscuro
+    ? './public/logo.png'           // negro
+    : './public/logo_blanco.png'    // blanco invertido
 )
 
 
