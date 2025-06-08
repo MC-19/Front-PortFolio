@@ -225,7 +225,7 @@ async function handleSubmit() {
   status.message = 'Por favor espera...'
 
   try {
-    const response = await fetch('https://back-portfolio-b9po.onrender.com//api/contact', {
+    const response = await fetch('https://back-portfolio-b9po.onrender.com/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData)
