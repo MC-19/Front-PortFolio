@@ -52,8 +52,8 @@ const isMobile = ref(window.innerWidth < 768)
 
 const logoSrc = computed(() =>
   opacity.value > 0.5 || isMobile.value
-    ? './public/logo.png'           // negro
-    : './public/logo_blanco.png'    // blanco invertido
+    ? '../public/logo.png'           // negro
+    : '../public/logo_blanco.png'    // blanco invertido
 )
 
 
