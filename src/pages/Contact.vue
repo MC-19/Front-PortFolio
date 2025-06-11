@@ -1,7 +1,7 @@
 <template>
   <section
     id="contacto"
-    class="relative bg-cover bg-center bg-no-repeat py-32 px-6"
+    class="relative bg-cover bg-center bg-no-repeat py-32 px-6 scroll-mt-32"
     style="background-image: url('/images/mountain-dusk.jpg')"
   >
     <div class="absolute inset-0 bg-black/60"></div>

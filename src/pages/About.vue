@@ -1,6 +1,6 @@
 <!-- Seccion About.vue -->
 <template>
-  <section id="sobre-mi" class="bg-neutral-900 text-white py-20 px-6 md:px-24">
+  <section id="sobre-mi" class="bg-neutral-900 text-white py-20 px-6 md:px-24 scroll-mt-32">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
       <!-- Columna izquierda: texto -->
       <div class="flex-1 text-left">

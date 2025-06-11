@@ -1,7 +1,7 @@
 <template>
   <section
     id="que-hago"
-    class="relative text-white py-24 px-4 md:px-12 lg:px-20 bg-cover bg-center bg-no-repeat"
+    class="relative text-white py-24 px-4 md:px-12 lg:px-20 bg-cover bg-center bg-no-repeat scroll-mt-32"
     style="background-image: url('/images/services-md.jpg')"
   >
     <!-- Capa oscura -->

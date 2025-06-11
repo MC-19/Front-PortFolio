@@ -1,5 +1,5 @@
 <template>
-  <section id="skills" class="bg-neutral-900 text-white py-24 px-6 md:px-16 lg:px-24">
+  <section id="skills" class="bg-neutral-900 text-white py-24 px-6 md:px-16 lg:px-24 scroll-mt-32">
     <h2 class="text-4xl font-bold mb-20 border-b-2 border-violet-300 inline-block pb-2">
       Habilidades
     </h2>

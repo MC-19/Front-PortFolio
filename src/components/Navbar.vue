@@ -37,6 +37,7 @@
         <li><a href="#sobre-mi" :class="linkClass" @click="menuOpen = false">Sobre mí</a></li>
         <li><a href="#que-hago" :class="linkClass" @click="menuOpen = false">Especialidad</a></li>
         <li><a href="#skills" :class="linkClass" @click="menuOpen = false">Skills</a></li>
+        <li><a href="#proyectos" :class="linkClass" @click="menuOpen = false">Projectos</a></li>
         <li><a href="#contacto" :class="linkClass" @click="menuOpen = false">Contacto</a></li>
       </ul>
     </div>
