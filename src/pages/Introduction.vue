@@ -10,7 +10,7 @@
   <div
     class="absolute inset-0 z-0"
     :class="isMobile
-      ? 'bg-black/90'
+      ? 'bg-black/60'
       : 'bg-gradient-to-b from-black/80 via-black/20 to-black/40'
     "
   ></div>
