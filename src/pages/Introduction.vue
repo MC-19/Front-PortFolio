@@ -4,7 +4,7 @@
   class="relative min-h-screen bg-fixed bg-center bg-no-repeat bg-cover"
   :class="{
     'bg-[url(/images/playa-pc.jpg)]': !isMobile,
-    'bg-[url(/images/playa-mobile.jpg)]': isMobile
+    'bg-[url(/images/)]': isMobile
   }"
 >
   <div
