@@ -3,7 +3,7 @@
     id="inicio"
     class="relative min-h-screen bg-center bg-no-repeat bg-cover
       bg-[url('/images/playa-mobile.jpg')]
-      md:bg-[url('/images/playa-pc.jpg')]"
+      md:bg-[url('/images/playa_rocas.jpg')]"
   >
     <!-- Overlay dinámico -->
     <div
