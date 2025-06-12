@@ -4,9 +4,9 @@
       Habilidades
     </h2>
 
-    <div class="grid gap-6 lg:grid-cols-3">
+    <div class="grid gap-10 lg:grid-cols-3">
       <!-- Columna izquierda -->
-      <div class="space-y-10 relative top-20">
+      <div class="space-y-10 lg:pt-20">
         <SkillBlock
           title="Frontend + Backend"
           :items="[
@@ -19,7 +19,7 @@
       </div>
 
       <!-- Columna central -->
-      <div class="space-y-10 relative -top-6">
+      <div class="space-y-10 lg:pt-0 lg:pb-10">
         <SkillBlock
           title="Diseño & Soft Skills"
           :items="[
@@ -31,7 +31,6 @@
         />
         <SkillBlock
           title="Ciberseguridad"
-          class="relative top-6"
           :items="[
             'Hacking Ético', 'Linux', 'Burp Suite',
             'Pentesting', 'Escaneo de Redes', 'Cracking de Contraseñas', 'Seguridad Web',
@@ -41,7 +40,7 @@
       </div>
 
       <!-- Columna derecha -->
-      <div class="space-y-10 relative top-20">
+      <div class="space-y-10 lg:pt-20">
         <SkillBlock
           title="Cloud / DevOps & Herramientas"
           :items="[
@@ -56,7 +55,6 @@
     </div>
   </section>
 </template>
-
 
 <script setup lang="ts">
 import SkillBlock from '../components/SkillBlock.vue'
