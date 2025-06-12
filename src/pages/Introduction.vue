@@ -2,7 +2,7 @@
   <section
     id="inicio"
     class="relative min-h-screen bg-center bg-no-repeat bg-cover
-      bg-[url('/images/playa-mobile.jpg')]
+      bg-[url('/images/playa-roocas.jpg')]
       md:bg-[url('/images/playa_rocas.jpg')]"
   >
     <!-- Overlay dinámico -->
