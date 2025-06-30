@@ -120,7 +120,7 @@
 </template>
 
 <script setup lang="ts">
-import { reactive, ref } from 'vue'
+import { onMounted, reactive, ref } from 'vue'
 
 const fields = [
   { id: 'name', label: 'Nombre', type: 'text', placeholder: '' },
@@ -266,5 +266,11 @@ async function handleSubmit() {
   }
   
 }
+
+onMounted(() => {
+  fetch('https://back-portfolio-b9po.onrender.com/api/ping')
+    .then(() => console.log('Backend despierto'))
+    .catch(() => console.warn('No se pudo despertar el backend'))
+})
 </script>
 
