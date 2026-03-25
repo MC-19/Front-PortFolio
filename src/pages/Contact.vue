@@ -197,25 +197,18 @@ async function handleSubmit() {
 
   // Validación email
   const email = formData.email
-  const betterEmailRegex = /^[a-zA-Z0-9._%+-]{2,}@[a-zA-Z0-9.-]{2,}\.[a-zA-Z]{2,}$/
-  const [local, domain] = email.split('@')
-  const domainParts = domain?.split('.') ?? []
-  const domainName = domainParts[0]
-  const tld = domainParts[1]
-  const fakeDomains = ['example.com', 'test.com', 'mailinator.com', 'tempmail.com']
+  const betterEmailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 
-  if (
-    !betterEmailRegex.test(email) ||
-    email.length < 6 ||
-    !domain ||
-    !domain.includes('.') ||
-    (tld?.length ?? 0) < 2 ||
-    /^\d+$/.test(local) ||
-    /^\d+$/.test(domainName) ||
-    fakeDomains.includes(domain)
-  ) {
+  if (!email || !betterEmailRegex.test(email)) {
     errors.email = 'Correo electrónico no válido'
     hasError = true
+  } else {
+    const domain = email.split('@')[1];
+    const fakeDomains = ['example.com', 'test.com', 'mailinator.com', 'tempmail.com'];
+    if (fakeDomains.includes(domain)) {
+      errors.email = 'Por favor, usa un correo electrónico real'
+      hasError = true
+    }
   }
 
   if (hasError) return
@@ -225,16 +218,27 @@ async function handleSubmit() {
   status.message = 'Por favor espera...'
 
   try {
-    const response = await fetch('https://back-portfolio-b9po.onrender.com/api/contact', {
+    const web3formsPayload = {
+      ...formData,
+      access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || 'TU_LLAVE_DE_WEB3FORMS',
+      subject: `Nuevo Mensaje desde tu Portafolio: ${formData.subject}`
+    }
+
+    const response = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData)
+      body: JSON.stringify(web3formsPayload)
     })
 
-    const responseData = await response.json()
+    let responseData
+    try {
+      responseData = await response.json()
+    } catch (e) {
+      throw new Error('El servidor está despertando o no respondió correctamente. Por favor, intenta de nuevo en unos segundos.')
+    }
 
     if (!response.ok) {
-      if (Array.isArray(responseData.message)) {
+      if (responseData.message && Array.isArray(responseData.message)) {
         for (const msg of responseData.message) {
           const match = msg.match(/^(\w+)\s/)
           const field = match?.[1]
@@ -245,7 +249,7 @@ async function handleSubmit() {
         return
       }
 
-      throw new Error(responseData.message || 'Error desconocido')
+      throw new Error(typeof responseData.message === 'string' ? responseData.message : 'Error al enviar el mensaje')
     }
 
     status.state = 'success'
@@ -257,10 +261,10 @@ async function handleSubmit() {
       status.state = ''
     }, 4000)
 
-  } catch (err) {
+  } catch (err: any) {
     console.error(err)
     status.state = 'error'
-    status.message = 'No se pudo enviar el mensaje. Intenta más tarde.'
+    status.message = err.message || 'No se pudo enviar el mensaje. Intenta más tarde.'
   } finally {
     isSending.value = false
   }
@@ -268,9 +272,8 @@ async function handleSubmit() {
 }
 
 onMounted(() => {
-  fetch('https://back-portfolio-b9po.onrender.com/api/ping')
-    .then(() => console.log('Backend despierto'))
-    .catch(() => console.warn('No se pudo despertar el backend'))
+  // Ya no necesitamos despertar ningún backend :)
+  console.log('Formulario listo usando Web3Forms')
 })
 </script>
 
