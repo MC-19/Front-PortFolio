@@ -15,30 +15,45 @@
         />
       </a>
 
-      <!-- Lenguaje -->
-      <button
-        @click="toggleLanguage"
-        class="md:mr-4 ml-auto mr-4 font-bold text-sm tracking-widest uppercase transition-colors"
-        :class="textColor"
-      >
-        {{ $t('nav.lang') }}
-      </button>
+      <!-- Controles: Idioma y Menú -->
+      <div class="flex items-center gap-4 ml-auto md:ml-0">
+        <!-- Selector Idioma (Tipo Pill) -->
+        <div 
+          class="flex items-center backdrop-blur-md rounded-full p-1 border transition-colors duration-300"
+          :class="opacity > 0.5 || isMobile ? 'bg-neutral-200/50 border-neutral-300' : 'bg-black/20 border-white/20'"
+        >
+          <button
+            @click="setLanguage('es')"
+            class="px-3 py-1 text-xs font-bold rounded-full transition-all duration-300"
+            :class="locale === 'es' ? 'bg-violet-400 text-neutral-900 shadow-sm' : (opacity > 0.5 || isMobile ? 'text-neutral-600 hover:text-neutral-900' : 'text-gray-300 hover:text-white')"
+          >
+            ES
+          </button>
+          <button
+            @click="setLanguage('en')"
+            class="px-3 py-1 text-xs font-bold rounded-full transition-all duration-300"
+            :class="locale === 'en' ? 'bg-violet-400 text-neutral-900 shadow-sm' : (opacity > 0.5 || isMobile ? 'text-neutral-600 hover:text-neutral-900' : 'text-gray-300 hover:text-white')"
+          >
+            EN
+          </button>
+        </div>
 
-      <!-- Botón hamburguesa -->
-      <button
-        class="md:hidden text-2xl"
-        :class="textColor"
-        @click="menuOpen = !menuOpen"
-      >
-        <i :class="menuOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'"></i>
-      </button>
+        <!-- Botón hamburguesa -->
+        <button
+          class="md:hidden text-2xl"
+          :class="textColor"
+          @click="menuOpen = !menuOpen"
+        >
+          <i :class="menuOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'"></i>
+        </button>
+      </div>
 
       <!-- Menú navegación -->
       <ul
         :class="[
-          'transition-all duration-300 md:flex space-x-8',
+          'transition-all duration-300 md:flex md:items-center space-x-0 md:space-x-8',
           menuOpen
-            ? 'absolute top-full left-0 w-full flex flex-col bg-violet-100/90 backdrop-blur-md px-6 py-4 md:static md:flex-row md:bg-transparent'
+            ? 'absolute top-full left-0 w-full flex flex-col gap-4 bg-violet-100/95 backdrop-blur-md px-6 py-6 border-b border-violet-200 md:static md:flex-row md:bg-transparent md:border-none md:gap-0 md:p-0'
             : 'hidden md:flex'
         ]"
       >
@@ -59,10 +74,9 @@ import { useI18n } from 'vue-i18n'
 
 const { locale } = useI18n()
 
-function toggleLanguage() {
-  const newLocale = locale.value === 'es' ? 'en' : 'es'
-  locale.value = newLocale
-  localStorage.setItem('user-locale', newLocale)
+function setLanguage(lang: 'es' | 'en') {
+  locale.value = lang
+  localStorage.setItem('user-locale', lang)
 }
 
 const scrollY = ref(0)

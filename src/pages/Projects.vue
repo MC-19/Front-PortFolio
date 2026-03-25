@@ -124,13 +124,13 @@ const projectsList = computed<ProjectInfo[]>(() => [
     link: 'https://grupoclavd.com'
   },
   {
-    id: 'mcsoftware',
-    image: '/images/mc_software_instagram.png',
-    title: 'MC-Software (' + t('projects.coming_soon') + ')',
-    shortDesc: t('projects.desc_mc_short'),
-    longDesc: t('projects.desc_mc_long'),
-    tags: ['Vue', 'Tailwind', 'Node.js', 'TypeScript'],
-    disabled: true
+    id: 'gymlab',
+    image: '/images/gymlab.png',
+    title: 'GymLab PWA',
+    shortDesc: t('projects.desc_gymlab_short'),
+    longDesc: t('projects.desc_gymlab_long'),
+    tags: ['React', 'PWA', 'React Router', 'Lucide'],
+    link: 'https://gym-lab-seven.vercel.app/'
   }
 ]);
 

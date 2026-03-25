@@ -47,8 +47,8 @@
     "coming_soon": "Coming Soon",
     "desc_grupoclavd_short": "Signage and installations company operating nationally and internationally.",
     "desc_grupoclavd_long": "Signage and installations company operating nationally and internationally. Website developed with Wix, focused on showcasing visual campaigns, services, and completed installations.",
-    "desc_mc_short": "Platform for professional software development, currently under construction.",
-    "desc_mc_long": "Personal project for the development of digital solutions. This platform will serve as the foundation for future software projects oriented towards SMEs and freelancers. Currently under construction."
+    "desc_gymlab_short": "Progressive Web App (PWA) for gym workout tracking, routine management, and progression.",
+    "desc_gymlab_long": "Progressive Web App aimed at sports training management. It allows planning routines, logging sets (weight, reps, RIR), and applying the progressive overload principle with an advanced offline data retention system using LocalStorage."
   },
   "contact": {
     "title": "Get In Touch",

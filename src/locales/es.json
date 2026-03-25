@@ -47,8 +47,8 @@
     "coming_soon": "Próximamente",
     "desc_grupoclavd_short": "Empresa de rotulación e instalaciones operando a nivel nacional e internacional.",
     "desc_grupoclavd_long": "Empresa de rotulación e instalaciones que opera a nivel nacional e internacional. Página web desarrollada con Wix, orientada a mostrar campañas visuales, servicios e instalaciones realizadas.",
-    "desc_mc_short": "Plataforma para el desarrollo de software profesional, actualmente en construcción.",
-    "desc_mc_long": "Proyecto personal para el desarrollo de soluciones digitales. Esta plataforma servirá como base para futuros proyectos de software orientados a pymes y autónomos. Actualmente en construcción."
+    "desc_gymlab_short": "Aplicación Web Progresiva (PWA) de entrenamiento en el gimnasio, con gestión de rutinas y progresión.",
+    "desc_gymlab_long": "Aplicación Web Progresiva orientada a la gestión de entrenamientos deportivos. Permite planificar rutinas, registrar series (peso, repeticiones, RIR) y aplicar el principio de sobrecarga progresiva con un sistema avanzado de retención de datos offline mediante LocalStorage."
   },
   "contact": {
     "title": "Get In Touch",
