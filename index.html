@@ -4,39 +4,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Título y descripción -->
-    <title>Mario Cristian | Desarrollador Web Fullstack</title>
-    <meta name="description" content="Portafolio personal de Mario Cristian, desarrollador web fullstack especializado en frontend y backend con tecnologías modernas. Descubre mis proyectos y contáctame.">
+    <!-- SEO: Título y descripción -->
+    <title>Mario Cristian Dascalu | Desarrollador Web Fullstack &amp; Ciberseguridad</title>
+    <meta name="description" content="Portafolio personal de Mario Cristian Dascalu, desarrollador web fullstack especializado en Vue, React, Node.js, TypeScript y Ciberseguridad. Descubre mis proyectos y contáctame.">
+    <meta name="keywords" content="desarrollador web, fullstack, Vue, React, TypeScript, Node.js, NestJS, ciberseguridad, portafolio, freelance, Español, Rumano">
+    <meta name="author" content="Mario Cristian Dascalu">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mario-cristian-dascalu.netlify.app/" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
 
-    <!-- Estilos -->
-    <link href="./src/assets/styles/base.css" rel="stylesheet" />
+    <!-- Preconnect para mejorar rendimiento de fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- Fuentes e íconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
 
-    <!-- Open Graph (para compartir en redes como Facebook, LinkedIn) -->
-    <meta property="og:title" content="Mario Cristian | Desarrollador Web" />
-    <meta property="og:description" content="Explora mis proyectos como desarrollador fullstack y contáctame para colaborar." />
-    <meta property="og:image" content="/images/og-image.jpg" /> <!-- Añade esta imagen -->
-    <meta property="og:url" content="https://mario-cristian-dascalu.netlify.app/" />
+    <!-- Open Graph (LinkedIn, Facebook, WhatsApp) -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Mario Cristian | Portfolio" />
+    <meta property="og:title" content="Mario Cristian Dascalu | Desarrollador Web Fullstack" />
+    <meta property="og:description" content="Explora mis proyectos como desarrollador fullstack (Vue, React, Node.js) y especialista en ciberseguridad. Contáctame para colaborar." />
+    <meta property="og:image" content="https://mario-cristian-dascalu.netlify.app/images/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://mario-cristian-dascalu.netlify.app/" />
+    <meta property="og:locale" content="es_ES" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Mario Cristian | Desarrollador Web" />
-    <meta name="twitter:description" content="Portafolio personal de Mario Cristian, desarrollador web fullstack." />
-    <meta name="twitter:image" content="/images/og-image.jpg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="twitter:title" content="Mario Cristian Dascalu | Desarrollador Web Fullstack" />
+    <meta name="twitter:description" content="Portafolio personal de Mario Cristian, desarrollador web fullstack y entusiasta de la ciberseguridad." />
+    <meta name="twitter:image" content="https://mario-cristian-dascalu.netlify.app/images/og-image.jpg" />
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Structured Data: Person + Portfolio (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Mario Cristian Dascalu Marisca",
+      "url": "https://mario-cristian-dascalu.netlify.app/",
+      "image": "https://mario-cristian-dascalu.netlify.app/images/yo.jpg",
+      "jobTitle": "Fullstack Web Developer",
+      "description": "Desarrollador web fullstack especializado en Vue, React, TypeScript, Node.js y Ciberseguridad.",
+      "knowsAbout": ["Vue.js", "React", "TypeScript", "Node.js", "NestJS", "Ciberseguridad", "Docker", "PostgreSQL"],
+      "sameAs": [
+        "https://github.com/MC-19",
+        "https://www.linkedin.com/in/cristian-dascalu-mc",
+        "https://www.instagram.com/__djmc_1/"
+      ]
+    }
+    </script>
+
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XSWN1PS5F"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
       gtag('config', 'G-3XSWN1PS5F');
     </script>
   </head>
