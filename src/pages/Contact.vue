@@ -7,11 +7,11 @@
     <div class="absolute inset-0 bg-black/60"></div>
 
     <div class="relative z-10 max-w-3xl mx-auto text-center text-white">
-      <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
+      <h2 class="text-4xl font-bold mb-4">{{ $t('contact.title') }}</h2>
       <div class="w-16 h-1 bg-violet-300 mx-auto mb-6"></div>
       <p class="mb-12 text-gray-300">
-        ¿Tienes un proyecto o solo quieres saludar?  
-        <br />No dudes en enviarme un mensaje.
+        {{ $t('contact.subtitle') }}  
+        <br />{{ $t('contact.subtitle_br') }}
       </p>
 
       <form
@@ -60,7 +60,7 @@
             :disabled="isSending"
             class="px-6 py-2 border border-violet-300 text-violet-300 font-semibold rounded hover:bg-violet-300 hover:text-black transition disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            {{ isSending ? 'Enviando...' : 'Enviar mensaje' }}
+            {{ isSending ? $t('contact.btn_sending') : $t('contact.btn_send') }}
           </button>
         </div>
       </form>
@@ -77,7 +77,7 @@
     <!-- Estado: Enviando -->
     <div v-if="status.state === 'sending'" class="flex flex-col items-center gap-4">
       <div class="w-10 h-10 border-4 border-violet-300 border-t-transparent rounded-full animate-spin"></div>
-      <h3 class="text-xl font-semibold tracking-wide">Enviando mensaje...</h3>
+      <h3 class="text-xl font-semibold tracking-wide">{{ $t('contact.status_sending') }}</h3>
       <p class="text-sm text-violet-300/80">{{ status.message }}</p>
     </div>
 
@@ -88,13 +88,13 @@
           <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
         </svg>
       </div>
-      <h3 class="text-xl font-bold">¡Mensaje enviado!</h3>
+      <h3 class="text-xl font-bold">{{ $t('contact.status_success') }}</h3>
       <p class="text-sm text-violet-300/80">{{ status.message }}</p>
       <button
         @click="status.state = ''"
         class="mt-4 px-4 py-2 border border-violet-300 rounded hover:bg-violet-300 hover:text-black transition"
       >
-        Volver al formulario
+        {{ $t('contact.btn_back') }}
       </button>
     </div>
 
@@ -105,13 +105,13 @@
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
         </svg>
       </div>
-      <h3 class="text-xl font-bold text-red-500">Error</h3>
+      <h3 class="text-xl font-bold text-red-500">{{ $t('contact.status_error') }}</h3>
       <p class="text-sm text-red-400">{{ status.message }}</p>
       <button
         @click="status.state = ''"
         class="mt-4 px-4 py-2 border border-violet-300 rounded hover:bg-violet-300 hover:text-black transition"
       >
-        Volver al formulario
+        {{ $t('contact.btn_back') }}
       </button>
     </div>
   </div>
@@ -120,14 +120,17 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, reactive, ref } from 'vue'
+import { onMounted, reactive, ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 
-const fields = [
-  { id: 'name', label: 'Nombre', type: 'text', placeholder: '' },
-  { id: 'email', label: 'Email', type: 'email', placeholder: '' },
-  { id: 'subject', label: 'Asunto', type: 'text', placeholder: '' },
-  { id: 'message', label: 'Mensaje', type: 'text', placeholder: '' }
-]
+const { t } = useI18n()
+
+const fields = computed(() => [
+  { id: 'name', label: t('contact.name'), type: 'text', placeholder: '' },
+  { id: 'email', label: t('contact.email'), type: 'email', placeholder: '' },
+  { id: 'subject', label: t('contact.subject'), type: 'text', placeholder: '' },
+  { id: 'message', label: t('contact.message'), type: 'text', placeholder: '' }
+])
 
 const formData = reactive<Record<string, string>>({
   name: '',
@@ -170,28 +173,28 @@ async function handleSubmit() {
 
   // Validación nombre
   if (!formData.name) {
-    errors.name = 'Este campo es obligatorio'
+    errors.name = t('contact.e_req')
     hasError = true
   } else if (formData.name.length < 2) {
-    errors.name = 'El nombre debe tener al menos 2 caracteres'
+    errors.name = t('contact.e_name_len')
     hasError = true
   }
 
   // Validación asunto
   if (!formData.subject) {
-    errors.subject = 'Este campo es obligatorio'
+    errors.subject = t('contact.e_req')
     hasError = true
   } else if (formData.subject.length < 4) {
-    errors.subject = 'El asunto debe tener al menos 4 caracteres'
+    errors.subject = t('contact.e_subj_len')
     hasError = true
   }
 
   // Validación mensaje
   if (!formData.message) {
-    errors.message = 'Este campo es obligatorio'
+    errors.message = t('contact.e_req')
     hasError = true
   } else if (formData.message.length < 10) {
-    errors.message = 'El mensaje debe tener al menos 10 caracteres'
+    errors.message = t('contact.e_msg_len')
     hasError = true
   }
 
@@ -200,13 +203,13 @@ async function handleSubmit() {
   const betterEmailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 
   if (!email || !betterEmailRegex.test(email)) {
-    errors.email = 'Correo electrónico no válido'
+    errors.email = t('contact.e_email_invalid')
     hasError = true
   } else {
     const domain = email.split('@')[1];
     const fakeDomains = ['example.com', 'test.com', 'mailinator.com', 'tempmail.com'];
     if (fakeDomains.includes(domain)) {
-      errors.email = 'Por favor, usa un correo electrónico real'
+      errors.email = t('contact.e_email_fake')
       hasError = true
     }
   }
@@ -215,7 +218,7 @@ async function handleSubmit() {
 
   isSending.value = true
   status.state = 'sending'
-  status.message = 'Por favor espera...'
+  status.message = t('contact.status_wait')
 
   try {
     const web3formsPayload = {
@@ -253,7 +256,7 @@ async function handleSubmit() {
     }
 
     status.state = 'success'
-    status.message = 'Gracias por tu mensaje. Te responderé pronto.'
+    status.message = t('contact.status_success_msg')
     Object.keys(formData).forEach(key => (formData[key] = ''))
       
     // Aquí agregas el cierre automático
@@ -264,7 +267,7 @@ async function handleSubmit() {
   } catch (err: any) {
     console.error(err)
     status.state = 'error'
-    status.message = err.message || 'No se pudo enviar el mensaje. Intenta más tarde.'
+    status.message = err.message || t('contact.status_error_msg')
   } finally {
     isSending.value = false
   }

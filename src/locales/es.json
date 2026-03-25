@@ -1,0 +1,80 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "specialty": "Especialidad",
+    "skills": "Skills",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "lang": "English"
+  },
+  "hero": {
+    "hello": "Hola, soy",
+    "subtitle": "Fullstack Developer & Ciberseguridad Enthusiast"
+  },
+  "about": {
+    "title": "Hey, soy Mario Cristian.",
+    "subtitle": "Soy un desarrollador con mentalidad creativa y atención al detalle, apasionado por unir código limpio con buen diseño.",
+    "p1": "Actualmente me especializo en desarrollo fullstack y ciberseguridad. Me encanta crear software útil, escalable y visualmente atractivo. Siempre estoy explorando nuevas tecnologías, buenas prácticas de código y formas de mejorar la experiencia del usuario.",
+    "p2": "Cuando no estoy programando, probablemente esté aprendiendo algo nuevo, mejorando proyectos personales o compartiendo conocimiento."
+  },
+  "whatido": {
+    "title": "¿Qué es lo que hago?",
+    "c1_title": "Desarrollo Web Fullstack",
+    "c1_desc": "Desarrollo soluciones web completas, desde la interfaz hasta el servidor. Utilizo tecnologías modernas como Vue, TypeScript y Node.js para crear sistemas robustos, eficientes y visualmente atractivos.",
+    "c2_title": "Código Seguro y Limpio",
+    "c2_desc": "Programar bien también implica hacerlo de forma segura. Aplico principios de ciberseguridad desde el inicio del proyecto, con buenas prácticas, validaciones y una mentalidad ética.",
+    "c3_title": "Interfaces Útiles y Usables",
+    "c3_desc": "Me enfoco en crear interfaces limpias, comprensibles y rápidas. Diseño pensando siempre en el usuario, buscando una experiencia clara, intuitiva y agradable.",
+    "c4_title": "Mentalidad Orientada a Proyectos",
+    "c4_desc": "No solo desarrollo software: resuelvo problemas reales. Me gusta trabajar en proyectos que ayuden a autónomos, pequeñas empresas o ideas personales a convertirse en soluciones útiles y escalables."
+  },
+  "skills": {
+    "title": "Habilidades",
+    "c1_title": "Frontend + Backend",
+    "c2_title": "Diseño & Soft Skills",
+    "c3_title": "Ciberseguridad",
+    "c4_title": "Cloud / DevOps & Herramientas",
+    "s_native_ro": "Rumano nativo",
+    "s_native_es": "Español nativo",
+    "s_communication": "Comunicación",
+    "s_teamwork": "Trabajo en equipo",
+    "s_adaptability": "Adaptabilidad"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "visit": "Ver sitio web",
+    "coming_soon": "Próximamente",
+    "desc_grupoclavd_short": "Empresa de rotulación e instalaciones operando a nivel nacional e internacional.",
+    "desc_grupoclavd_long": "Empresa de rotulación e instalaciones que opera a nivel nacional e internacional. Página web desarrollada con Wix, orientada a mostrar campañas visuales, servicios e instalaciones realizadas.",
+    "desc_mc_short": "Plataforma para el desarrollo de software profesional, actualmente en construcción.",
+    "desc_mc_long": "Proyecto personal para el desarrollo de soluciones digitales. Esta plataforma servirá como base para futuros proyectos de software orientados a pymes y autónomos. Actualmente en construcción."
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "¿Tienes un proyecto o solo quieres saludar?",
+    "subtitle_br": "No dudes en enviarme un mensaje.",
+    "name": "Nombre",
+    "email": "Email",
+    "subject": "Asunto",
+    "message": "Mensaje",
+    "btn_send": "Enviar mensaje",
+    "btn_sending": "Enviando...",
+    "e_req": "Este campo es obligatorio",
+    "e_name_len": "El nombre debe tener al menos 2 caracteres",
+    "e_subj_len": "El asunto debe tener al menos 4 caracteres",
+    "e_msg_len": "El mensaje debe tener al menos 10 caracteres",
+    "e_email_invalid": "Correo electrónico no válido",
+    "e_email_fake": "Por favor, usa un correo electrónico real",
+    "status_sending": "Enviando mensaje...",
+    "status_wait": "Por favor espera...",
+    "status_success": "¡Mensaje enviado!",
+    "status_success_msg": "Gracias por tu mensaje. Te responderé pronto.",
+    "status_error": "Error",
+    "status_error_msg": "No se pudo enviar el mensaje. Intenta más tarde.",
+    "btn_back": "Volver al formulario"
+  },
+  "footer": {
+    "text": "Conecta conmigo o explora mis repositorios."
+  }
+}

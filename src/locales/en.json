@@ -1,0 +1,80 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About me",
+    "specialty": "Specialty",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact",
+    "lang": "Español"
+  },
+  "hero": {
+    "hello": "Hi, I am",
+    "subtitle": "Fullstack Developer & Cybersecurity Enthusiast"
+  },
+  "about": {
+    "title": "Hey, I'm Mario Cristian.",
+    "subtitle": "I'm a developer with a creative mindset and attention to detail, passionate about uniting clean code with good design.",
+    "p1": "I currently specialize in fullstack development and cybersecurity. I love creating useful, scalable, and visually appealing software. I am always exploring new technologies, coding best practices, and ways to improve user experience.",
+    "p2": "When I'm not coding, I'm probably learning something new, pushing personal projects forward, or sharing knowledge."
+  },
+  "whatido": {
+    "title": "What do I do?",
+    "c1_title": "Fullstack Web Development",
+    "c1_desc": "I develop complete web solutions, from the interface to the server. I use modern technologies like Vue, TypeScript, and Node.js to build robust, efficient, and visually appealing systems.",
+    "c2_title": "Secure and Clean Code",
+    "c2_desc": "Good programming also means programming securely. I apply cybersecurity principles from the start of the project, with best practices, validations, and an ethical mindset.",
+    "c3_title": "Useful and Usable Interfaces",
+    "c3_desc": "I focus on creating clean, understandable, and fast interfaces. I always design with the user in mind, aiming for a clear, intuitive, and pleasant experience.",
+    "c4_title": "Project-Oriented Mindset",
+    "c4_desc": "I don't just develop software: I solve real problems. I enjoy working on projects that help freelancers, small businesses, or personal ideas become useful and scalable solutions."
+  },
+  "skills": {
+    "title": "Skills",
+    "c1_title": "Frontend + Backend",
+    "c2_title": "Design & Soft Skills",
+    "c3_title": "Cybersecurity",
+    "c4_title": "Cloud / DevOps & Tools",
+    "s_native_ro": "Native Romanian",
+    "s_native_es": "Native Spanish",
+    "s_communication": "Communication",
+    "s_teamwork": "Teamwork",
+    "s_adaptability": "Adaptability"
+  },
+  "projects": {
+    "title": "Projects",
+    "visit": "Visit website",
+    "coming_soon": "Coming Soon",
+    "desc_grupoclavd_short": "Signage and installations company operating nationally and internationally.",
+    "desc_grupoclavd_long": "Signage and installations company operating nationally and internationally. Website developed with Wix, focused on showcasing visual campaigns, services, and completed installations.",
+    "desc_mc_short": "Platform for professional software development, currently under construction.",
+    "desc_mc_long": "Personal project for the development of digital solutions. This platform will serve as the foundation for future software projects oriented towards SMEs and freelancers. Currently under construction."
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Got a project or just want to say hi?",
+    "subtitle_br": "Feel free to drop me a message.",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "btn_send": "Send message",
+    "btn_sending": "Sending...",
+    "e_req": "This field is required",
+    "e_name_len": "Name must have at least 2 characters",
+    "e_subj_len": "Subject must have at least 4 characters",
+    "e_msg_len": "Message must be at least 10 characters long",
+    "e_email_invalid": "Invalid email address",
+    "e_email_fake": "Please use a real email address",
+    "status_sending": "Sending message...",
+    "status_wait": "Please wait...",
+    "status_success": "Message sent!",
+    "status_success_msg": "Thanks for your message. I'll get back to you soon.",
+    "status_error": "Error",
+    "status_error_msg": "Could not send the message. Please try again later.",
+    "btn_back": "Back to form"
+  },
+  "footer": {
+    "text": "Connect with me or explore my repositories."
+  }
+}

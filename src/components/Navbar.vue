@@ -15,6 +15,15 @@
         />
       </a>
 
+      <!-- Lenguaje -->
+      <button
+        @click="toggleLanguage"
+        class="md:mr-4 ml-auto mr-4 font-bold text-sm tracking-widest uppercase transition-colors"
+        :class="textColor"
+      >
+        {{ $t('nav.lang') }}
+      </button>
+
       <!-- Botón hamburguesa -->
       <button
         class="md:hidden text-2xl"
@@ -33,12 +42,12 @@
             : 'hidden md:flex'
         ]"
       >
-        <li><a href="#inicio" :class="linkClass" @click="menuOpen = false">Inicio</a></li>
-        <li><a href="#sobre-mi" :class="linkClass" @click="menuOpen = false">Sobre mí</a></li>
-        <li><a href="#que-hago" :class="linkClass" @click="menuOpen = false">Especialidad</a></li>
-        <li><a href="#skills" :class="linkClass" @click="menuOpen = false">Skills</a></li>
-        <li><a href="#proyectos" :class="linkClass" @click="menuOpen = false">Proyectos</a></li>
-        <li><a href="#contacto" :class="linkClass" @click="menuOpen = false">Contacto</a></li>
+        <li><a href="#inicio" :class="linkClass" @click="menuOpen = false">{{ $t('nav.home') }}</a></li>
+        <li><a href="#sobre-mi" :class="linkClass" @click="menuOpen = false">{{ $t('nav.about') }}</a></li>
+        <li><a href="#que-hago" :class="linkClass" @click="menuOpen = false">{{ $t('nav.specialty') }}</a></li>
+        <li><a href="#skills" :class="linkClass" @click="menuOpen = false">{{ $t('nav.skills') }}</a></li>
+        <li><a href="#proyectos" :class="linkClass" @click="menuOpen = false">{{ $t('nav.projects') }}</a></li>
+        <li><a href="#contacto" :class="linkClass" @click="menuOpen = false">{{ $t('nav.contact') }}</a></li>
       </ul>
     </div>
   </nav>
@@ -46,6 +55,15 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { locale } = useI18n()
+
+function toggleLanguage() {
+  const newLocale = locale.value === 'es' ? 'en' : 'es'
+  locale.value = newLocale
+  localStorage.setItem('user-locale', newLocale)
+}
 
 const scrollY = ref(0)
 const menuOpen = ref(false)

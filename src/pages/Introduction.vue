@@ -17,10 +17,10 @@
     <!-- Contenido -->
     <div class="relative z-10 flex flex-col justify-center items-center text-white text-center px-4 pt-32 md:pt-[15%]">
       <h1 class="text-4xl md:text-6xl font-light tracking-wide leading-tight max-w-4xl">
-        Hola, soy <span class="font-semibold">Mario Cristian Dascalu Marisca</span>
+        {{ $t('hero.hello') }} <span class="font-semibold">Mario Cristian Dascalu Marisca</span>
       </h1>
       <p class="text-gray-300 mt-4 text-lg md:text-xl">
-        Fullstack Developer & Ciberseguridad Enthusiast
+        {{ $t('hero.subtitle') }}
       </p>
 
       <!-- Botón con logo y flecha -->
